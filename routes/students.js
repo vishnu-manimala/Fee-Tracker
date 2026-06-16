@@ -54,7 +54,7 @@ router.get('/', async (req, res) => {
     const students = await Student.find(filter)
       .populate('school', 'name')
       .select('fullName phone place school monthlyFee advanceFee isActive lastReminderSentAt payments')
-      .sort({ fullName: 1 })
+      .sort({ creqatedat: -1 })
       .skip((page - 1) * limit)
       .limit(parseInt(limit))
       .lean({ virtuals: true });
