@@ -72,7 +72,7 @@ router.get('/', async (req, res) => {
         return st === status;
       });
     }
-
+  
     const total = await Student.countDocuments(filter);
 
     return res_.success(res, {

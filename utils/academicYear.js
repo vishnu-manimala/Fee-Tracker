@@ -18,7 +18,7 @@ function getAcademicYear(date = new Date()) {
  */
 function getAcademicMonths() {
   const months = [];
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 10; i++) {
     months.push(((START_MONTH - 1 + i) % 12) + 1);
   }
   return months;
